@@ -3,40 +3,34 @@ public class Main {
         System.out.println("ДЗ \"Условный оператор 2\" \n");
 
         //Задача 1
-        byte clientOS = 0;//0 — iOS, 1 — Android
+        byte clientOS = 1;//0 — iOS, 1 — Android
         System.out.println("Задача 1");
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке\n");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке\n");
-                break;
-            default:
-                System.out.println("Нет приложения для Symbyan\n");
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке\n");
+        } else  if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке\n");
+        } else {
+            System.out.println("Нет приложения для Symbyan\n");
         }
 
         //Задача 2
-        byte clientOS2 = 1; //0 — iOS, 1 — Android
+        byte clientOS2 = 0; //0 — iOS, 1 — Android
         int clientDeviceYear = 2015;
         System.out.println("Задача 2");
-        switch (clientOS2) {
-            case 0:
-                if (clientDeviceYear <= 2015){
-                    System.out.println("Установите облегченную версию приложения для iOS по ссылке\n");
-                } else {
-                    System.out.println("Установите версию приложения для iOS по ссылке\n");
-                }
-                break;
-            case 1:
-                if (clientDeviceYear <= 2015){
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке\n");
-                } else {
-                    System.out.println("Установите версию приложения для Android по ссылке\n");
-                }
-                break;
-            default:
-                System.out.println("Нет приложения для Symbyan\n");
+        if (clientOS2 == 0) {
+            if (clientDeviceYear <= 2015) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке\n");
+            } else {
+                System.out.println("Установите версию приложения для iOS по ссылке\n");
+            }
+        } else if (clientOS2 == 1) {
+            if (clientDeviceYear <= 2015) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке\n");
+            } else {
+                System.out.println("Установите версию приложения для Android по ссылке\n");
+            }
+        } else {
+               System.out.println("Нет приложения для Symbyan\n");
         }
 
         //Задача 3
